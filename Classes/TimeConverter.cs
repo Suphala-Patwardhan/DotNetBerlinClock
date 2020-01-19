@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text.RegularExpressions;
 
 namespace BerlinClock
@@ -67,10 +67,10 @@ namespace BerlinClock
             #endregion
 
             #region determining the value for Row 5
-            int tempSecMod = timeArray[2] % 5;
+            int tempminmod = timeArray[1] % 5;
             myTime[4] = "OOOO";
             regex = new Regex(Regex.Escape("O"));
-            myTime[4] = regex.Replace(myTime[4], "Y", tempSecMod);
+            myTime[4] = regex.Replace(myTime[4], "Y", tempminmod);
             #endregion
 
             string time = string.Join("\r\n", myTime);
